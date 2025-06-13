@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  db:
+    container_name: "currencyBotDB"
+    image: postgres:17-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "currencyBotDB"
+      POSTGRES_USER: "username"
+      POSTGRES_PASSWORD: "password"
+    restart: unless-stopped
+
+
